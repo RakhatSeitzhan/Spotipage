@@ -1,0 +1,93 @@
+*{
+    font-family: 'Nunito Sans', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* ////// PROFILE STYLING ////// */
+
+/* ////// TRACKS STYLING ////// */
+
+
+#profile, #tracks, #recommendations, #artists{
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(17, 5, 37);
+    box-shadow: 0px 4px 15px 1px rgba(0,0,0,0.5);
+}
+.row{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+}
+.track, .artist, #profile-container{
+    width: 100%;
+    max-width: 40vw;
+    text-align: center;
+    color: rgb(17, 5, 37);
+    background-color: rgb(221, 221, 221);
+    box-shadow: 0px 4px 15px 1px rgba(0,0,0,0.5);
+    margin: 15px;
+    padding: 20px;
+    transition: all 0.2s;
+}
+.track:hover, .artist:hover{
+    background-color: rgba(255, 255, 255, 0.76);
+}
+.track-image, .artist-image, #profile-image{
+    width: 90%;
+    box-shadow: 0px 4px 15px 1px rgba(0,0,0,0.5);
+    object-fit: contain;
+}
+.track-name, .artist-name,#profile-name{
+    font-size: 3vw;
+}
+.track-artist,.artist-data,#profile-data{
+    font-size: 2vw;
+}
+
+/* ////// BAR STYLING ////// */
+
+.bar-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60vw;
+    background: rgb(228, 228, 228);
+    box-shadow: 0px 4px 15px 1px rgba(0,0,0,0.5);
+}
+.bar-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+}
+.bar-percentage{
+    fill: black;
+}
+.bar-label{
+    fill: black;
+}
+.bar-description{
+    fill:rgb(32, 32, 32)
+}
+.bar{
+    height:100%;
+    width: 100%;
+}
+.arc{
+    transition: all 0.2s;
+    filter: drop-shadow( 0px 4px 15px rgba(0,0,0,0.5));
+}
