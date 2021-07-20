@@ -5,6 +5,11 @@ export default function bar(data, html){
     var height = getDivHeight(html)
     var radius = Math.min(width, height) / 2*0.9
     var textHeight = radius*2*0.075
+    svg.append('circle')
+        .attr('cx', width/2)
+        .attr('cy', height/2)
+        .attr('r', radius)
+        .attr('fill', 'white')
     var g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
     var color = d3.scaleOrdinal(d3.quantize(d3.interpolateRainbow, data.length + 1))
     //var color = d3.scaleOrdinal(data.map(item => item.color));
@@ -31,7 +36,7 @@ export default function bar(data, html){
                     percentage.attr('x', width/2).attr('y', height/2+textHeight*1.01).attr('font-size', textHeight*0.8)
                     description.attr('x', width/2).attr('y', height/2+textHeight*1.7).attr('font-size', textHeight*0.5)
                     // finish fucking word wrap pless
-                    arcs.attr('fill-opacity', node => node == d ? 1 : 0.6)
+                    arcs.attr('fill-opacity', node => node == d ? 1 : 0.8)
                 })
                 .on('mouseleave', ()=>{
                     arcs.attr('fill-opacity', 1)
